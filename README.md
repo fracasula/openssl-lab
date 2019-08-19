@@ -31,7 +31,7 @@ openssl rsautl -decrypt -inkey private_key.pem -in secret.enc
 openssl dgst -sha256 -sign private_key.pem -out secret.txt.sha256 secret.txt
 ```
 
-## Verify that the file hasn't been tampered by using the hash digest
+## Verify that the file hasn't been tampered with by using the hash digest
 
 ```
 openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
